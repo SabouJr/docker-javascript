@@ -1,10 +1,10 @@
-version: '3'
+version: "3"
 services:
   node:
     restart: always
     build: .
     ports:
-      - 80:3000
+      - 8443:3000
     volumes:
       - ./:/code
   mongo:
@@ -14,4 +14,4 @@ services:
     volumes:
       - mongodb:/data/db
 volumes:
- mongodb:
+  mongodb:
