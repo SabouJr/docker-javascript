@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Welcome on Our Docker-Node-App</title>
+</head>
+
+<body>
+  <h1>Welcome on Our Docker-Node-App</h1>
+  <form method="post" action="/item/add">
+    <input type="text" name="name">
+    <input type="submit" value="Ajouter">
+  </form>
+  <h4>Liste :</h4>
+  <ul>
+    <% items.forEach(function(item) { %>
+      <li>
+        <%= item.name %>
+      </li>
+      <% }); %>
+  </ul>
+</body>
+
+</html>
